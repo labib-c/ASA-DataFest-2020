@@ -10,8 +10,8 @@ if (!requireNamespace("httpuv", quietly = TRUE)) {
 }
 
 twitterAuth <- function(){
-  api_key <- "OVsaPRe1yHuT5qx4eWntn1uGX"
-  api_secret_key <- "r16wkxH16HMZcewCYZUsi82JXJn31Eli9MaouOAvGfOdYJsQ2z"
+  api_key <- "API KEY"
+  api_secret_key <- "API SECRET KEYß"
   
   ## authenticate via web browser
   token <- create_token(
