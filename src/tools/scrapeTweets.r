@@ -10,8 +10,8 @@ if (!requireNamespace("httpuv", quietly = TRUE)) {
 }
 
 twitterAuth <- function(){
-  api_key <- "API KEY"
-  api_secret_key <- "API SECRET KEY"
+  api_key <- "OVsaPRe1yHuT5qx4eWntn1uGX"
+  api_secret_key <- "r16wkxH16HMZcewCYZUsi82JXJn31Eli9MaouOAvGfOdYJsQ2z"
   
   ## authenticate via web browser
   token <- create_token(
@@ -22,8 +22,12 @@ twitterAuth <- function(){
   get_token()  
 }
 
-tweets <- search_tweets("pandemic", n = 20000,
-                               include_rts = FALSE)
+tweets <- search_tweets("pandemic",
+                        n = 100000,
+                        include_rts = FALSE, 
+                        token = bearer_token(),
+                        retryonratelimit = TRUE,
+                        lang = "en")
 
 df <- as.data.frame(tweets, row.names = TRUE)
 df2 = data.frame(lapply(df, as.character), stringsAsFactors=FALSE)
