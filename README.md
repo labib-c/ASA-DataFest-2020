@@ -14,6 +14,9 @@ To process [the CSV files](https://ieee-dataport.org/open-access/coronavirus-cov
 >Note: Update path in script as described in the comments
 
 Once you've created a directory containing the CSV files, run the [getTweetIds.py](https://github.com/labib-c/ASA-DataFest-2020/tree/master/src/tools/getTweetIds.py) script to replace the CSV's to only contain the tweet IDs.
+```
+python3 getTweetIds.py
+```
 
 Once that is complete, you can then upload the CSV containing the tweet IDs to the Hydrator linked above.
 >Note: You will need a Twitter Developer Account to be able to use the Hydrator.
