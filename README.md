@@ -1,4 +1,5 @@
 # ASA-DataFest-2020
+We want to analyze the average sentiment among tweets during this Global Pandemic, and analyze whether the daily rise in new cases has an effect on the sentiment amongst Twitter users. 
 
 ## Data Used
 https://covid.ourworldindata.org/data/ecdc/new_cases.csv
@@ -15,7 +16,11 @@ https://www.ecdc.europa.eu/en/publications-data/download-todays-data-geographic-
 
 [3] “Download today’s data on the geographic distribution of COVID-19 cases worldwide.” 	
 European Centre for Disease Prevention and Control, https://www.ecdc.europa.eu/en/publications-data/download-todays-data-geographic-distribution-covid-19-cases-worldwide. Accessed Jun. 13, 2020.
+
+[4] Ritchie, Hannah. “Coronavirus Source Data.” Our World in Data, ourworldindata.org/coronavirus-source-data. Accessed Jun. 14, 2020.
+
 ### Processing Data
+We need to process the data from https://ieee-dataport.org/open-access/coronavirus-covid-19-tweets-dataset as the datasets only contain the tweet IDs rather than the full tweet.
 #### Requirements
     * Python
     * Pandas
