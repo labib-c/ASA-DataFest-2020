@@ -5,17 +5,17 @@ library(plyr)
 path <- "/Users/labibchowdhury/Projects/ASA-DataFest-2020/covid-tweets/"
 files <- list.files(path=path, pattern="corona_tweets_*", full.names=TRUE, recursive=FALSE)
 sentiments <- list()
+total_tweets <- list()
 for (f in files){
   df <- fread(f)
   avg <- mean(df$V2)
   sentiments <- append(avg, sentiments)
+  total_tweets <- append(nrow(df), total_tweets)
 }
 df <- ldply (sentiments, data.frame) 
+total_tweets_df <- ldply(total_tweets, data.frame)
 names(df)[names(df) == "X..i.."] <- "avg_sentiment"
-avg_plot <- ggplot(data=df, aes(x=seq(1,length(files)), y=avg_sentiment, group=1)) +
-  geom_line()+
-  geom_point()+
-  labs(y = "Average Sentiment", x = "Days") 
+names(total_tweets_df)[names(total_tweets_df) == "X..i.."] <- "total_tweets"
 
 data <- fread("/Users/labibchowdhury/Projects/ASA-DataFest-2020/covid-tweets/new_cases.csv")
 # Sum daily cases for all countries.
@@ -24,7 +24,8 @@ d$date <- as.Date(d$date)
 days = d$date >= as.Date('2020-03-20') & d$date <= as.Date('2020-06-07')
 d <- d[days,]
 
-df$date = d$date
+df$date <- d$date
+total_tweets_df$date <- d$date
 ggplot() +
   geom_line(data=d, aes(x=date, y=dailycount, group=1), color = "red") +
   labs(y = "New Cases", x = "Date") 
@@ -32,3 +33,9 @@ ggplot() +
 ggplot() +
   geom_line(data = df, aes(x = date, y=avg_sentiment, group=1), color = "blue") +
   labs(y = "Average Sentiment", x = "Date")
+
+ggplot() +
+  geom_line(data = total_tweets_df, aes(x = date, y=total_tweets, group=1), color = "green") +
+  labs(y = "Tweets", x = "Date")
+  
+  
