@@ -24,8 +24,8 @@ d$date <- as.Date(d$date)
 days = d$date >= as.Date('2020-03-20') & d$date <= as.Date('2020-06-07')
 d <- d[days,]
 
-df$date <- d$date
-total_tweets_df$date <- d$date
+df$date <- rev(d$date)
+total_tweets_df$date <- rev(d$date)
 ggplot() +
   geom_line(data=d, aes(x=date, y=dailycount, group=1), color = "red") +
   labs(y = "New Cases", x = "Date") 
