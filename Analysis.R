@@ -14,4 +14,5 @@ data <- read.csv("https://opendata.ecdc.europa.eu/covid19/casedistribution/csv",
 d <- data.frame(date=data$dateRep, dailycount=data$cases)
 df <- d %>% group_by(date) %>% summarize(dailycount = sum(dailycount))
 
-plot(df$dailycount ~ df$date)
+plot(df$date, df$dailycount)
+lines(df$date[order(df$date)], df$dailycount[order(df$dailycount)])
