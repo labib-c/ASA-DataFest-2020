@@ -11,9 +11,8 @@ for (f in files){
   sentiments <- append(avg, sentiments)
 }
 df <- ldply (sentiments, data.frame) 
-
 names(df)[names(df) == "X..i.."] <- "avg_sentiment"
 ggplot(data=df, aes(x=seq(1,length(files)), y=avg_sentiment, group=1)) +
   geom_line()+
   geom_point()+
-  labs(y = "Average Sentiment") 
+  labs(y = "Average Sentiment", x = "Days") 
