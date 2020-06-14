@@ -1,6 +1,8 @@
 # ASA-DataFest-2020
 
 ## Data Used
+https://covid.ourworldindata.org/data/ecdc/new_cases.csv
+
 https://ieee-dataport.org/open-access/coronavirus-covid-19-tweets-dataset
 
 https://zenodo.org/record/3884334
