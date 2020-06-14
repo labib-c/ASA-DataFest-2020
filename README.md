@@ -5,13 +5,14 @@ https://ieee-dataport.org/open-access/coronavirus-covid-19-tweets-dataset
 
 https://zenodo.org/record/3884334
 
-https://ourworldindata.org/grapher/daily-cases-covid-19
+https://www.ecdc.europa.eu/en/publications-data/download-todays-data-geographic-distribution-covid-19-cases-worldwide
 
 [1] Rabindra Lamsal. "Coronavirus (COVID-19) Tweets Dataset". IEEE Dataport, 2020. [Online]. Available: http://dx.doi.org/10.21227/781w-ef42. Accessed: Jun. 05, 2020.
 
 [2] Banda, Juan M., Tekumalla, Ramya, Wang, Guanyu, Yu, Jingyuan, Liu, Tuo, Ding, Yuning, … Chowell, Gerardo. (2020). "A large-scale COVID-19 Twitter chatter dataset for open scientific research - an international collaboration (Version 13.0) [Data set]". Zenodo. http://doi.org/10.5281/zenodo.3884334. Accessed Jun. 13, 2020.
 
-[3] “Daily Confirmed COVID-19 Cases.” Our World in Data, ourworldindata.org/grapher/daily-cases-covid-19. Accessed Jun. 13, 2020.
+[3] “Download today’s data on the geographic distribution of COVID-19 cases worldwide.” 	
+European Centre for Disease Prevention and Control, https://www.ecdc.europa.eu/en/publications-data/download-todays-data-geographic-distribution-covid-19-cases-worldwide. Accessed Jun. 13, 2020.
 ### Processing Data
 #### Requirements
     * Python
