@@ -1,4 +1,5 @@
 # ASA-DataFest-2020
+We want to analyze the average sentiment among tweets during this Global Pandemic, and analyze whether the daily rise in new cases has an effect on the sentiment amongst Twitter users. 
 
 ## Data Used
 https://covid.ourworldindata.org/data/ecdc/new_cases.csv
